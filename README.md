@@ -138,11 +138,11 @@ Email address: cellister at gmail .com
 
 * **Jupyter Notebook**
 
-The [Jupyter Notebook](https://github.com/cellister/Film-Investment-Analysis-Project/blob/main/Film_Investment_Analysis_Notebook.ipynb) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
+The [Jupyter Notebook](https://github.com/cellister/ML_Molecule_Structure_Predictor/blob/main/ML_Molecular_Structure_Predictor.ipynb) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
 
 * **Presentation**
 
-This 5-7 minute, non-technical [presentation](https://github.com/cellister/Film-Investment-Analysis-Project/blob/main/Report%20PDFs/Erin_Wasserman_presentation_PDF_P2.pdf) was made in [Canva](https://www.canva.com/design/DAFzlcctuzo/YpMIvURJO6cI7aveTLrNDA/edit?utm_content=DAFzlcctuzo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
+This 5-7 minute, non-technical [presentation](https://github.com/cellister/Film-Investment-Analysis-Project/blob/main/Report%20PDFs/Erin_Wasserman_presentation_PDF_P2.pdf) was made in [Canva](https://www.canva.com/design/DAGAhemjCqQ/SC9XjPt87gS8cgYyPIWb5Q/edit?utm_content=DAGAhemjCqQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
 
 * **Data**
 
