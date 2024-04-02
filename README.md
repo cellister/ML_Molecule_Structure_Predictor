@@ -6,15 +6,18 @@ Analysis by Erin Wasserman, April 2024
 
 # Overview
 
+This project explores different machine learning algorithms to predict the lowest distortion in perovskite structures, which is a critical aspect in ceramic science, materials physics, and solid-state inorganic chemistry. Researchers have identified a total of 73 elements in the A and B cation sites of ABO3 structures, leading to numerous oxides of the perovskite type.
+
+The objective is to develop models capable of accurately classifying perovskite structures based on features such as electronegativity, ionic radius, valence, and bond lengths of A-O and B-O pairs, thereby aiding in the prediction and optimization of material properties. Model performance is assessed using the Accuracy Score metric.
+
 # Business Problem
 
-A Research Laboratory has asked for an analysis of a dataset to help understand the relationships between various physical and chemical properties of perovskite materials and their crystal structure types.
+A Research Laboratory has asked for an analysis of a dataset to help understand the relationships between various physical and chemical properties of perovskite materials and their crystal structure types. Based on this analysis, the following recommendations are made:
 
-This project will determine:
-
-(1) If there are any discernable patterns or correlations among the different variables and perovskite structure types?
-(2) How well features like the Glodschmidt tolerance factor, the electronegativity, and octahedral factor contribute to the predictive accuracy of the classification model? 
-(3) Are there any limitations or challenges in interpreting the model's predictions based on the selected features? 
+- Utilize the Random Forest model.
+- Enhance dataset with additional empirical data.
+- Address missing values and discrepancies using insights from feature importance analysis to ensure data quality.
+- Strategically target discrete values: Leverage RBF SVM's proficiency in capturing nonlinear relationships to target molecules with discrete values for improved predictive accuracy.
 
 # Data Understanding
 
@@ -84,18 +87,34 @@ mu : Octahedral factor
 
 ## Decision Tree
 
-* Accuracy score
-* Top three feature importance
+ Decision Tree Model: Identified significant features including 'tG', 'tau', 'ENR_diff', 'bond_len_BO', and 'EN_A'. 
+
+Evaluation Scores:
+Precision: 81%
+Recall: 81%
+Accuracy: 81%
+F1-Score: 81%
+
 
 ## Random Forest
 
-* Accuracy score
-* Top three feature importance
+Random Forest Model: Highlighted 'tG', 'ENR_diff', 'tau', 'EN_B', and 'bond_len_AO' as important predictors.
+
+Evaluation Scores:
+Precision: 85%
+Recall: 86%
+Accuracy: 86%
+F1-Score: 85%
 
 ## Support Vector Machine
 
-* Accuracy score
-* Top three feature importance
+RBF Support Vector Machine: Found 'tau', 'vA', 'vB', 'EN_B', and 'ENR_diff' as key features.
+
+Evaluation Scores:
+Precision: 83%
+Recall: 83%
+Accuracy: 83%
+F1-Score: 82%
 
 ## Actionable Insight
 
@@ -138,7 +157,7 @@ Email address: cellister at gmail .com
 
 * **Jupyter Notebook**
 
-The [Jupyter Notebook](https://github.com/cellister/ML_Molecule_Structure_Predictor/blob/main/ML_Molecular_Structure_Predictor.ipynb) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
+The [Jupyter Notebook](https://github.com/cellister/ML_Molecule_Structure_Predictor/blob/main/Project_PDFs/ML_Molecular_Structure_Predictor%20-%20Jupyter%20Notebook.pdf) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
 
 * **Presentation**
 
@@ -151,18 +170,20 @@ The data used in this analysis can be found in the ‘Data’ folder. Some data 
 ```
 
 ├── Photos
-│   ├── genre_analysis
-│   ├── notebook
-│   ├── profit_analysis
-│   ├── release_date_analysis
-│   └── runtime_analysis
+│   ├── Other
+│   ├── EDA
+│   ├── SVM
+│   ├── Random_Forest
+│   └── Decision_Tree
 ├── Data
-├── Project PDFs
-│   ├── film_investment_analysis_presentation.pdf
-│   ├── film_investment_analysis_notebook.pdf
+|   ├── Perovskite_train.csv
+│   ├── Perovskite_test.csv
+├── Project_PDFs
+│   ├── ML_Molecule_Structure_Predictor.pdf
+│   ├── ML_Molecule_Structure_Predictor.pdf
 │   └── github_repository.pdf
 ├── .gitignore
-├── Film_Investment_Analysis.ipynb
+├── ML_Molecule_Structure_Predictor.ipynb
 └── README.md
 ```
 
