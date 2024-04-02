@@ -12,7 +12,9 @@ The objective is to develop models capable of accurately classifying perovskite 
 
 # Business Problem
 
-A Research Laboratory has asked for an analysis of a dataset to help understand the relationships between various physical and chemical properties of perovskite materials and their crystal structure types. Based on this analysis, the following recommendations are made:
+A Research Laboratory has asked for an analysis of a dataset to help understand the relationships between various physical and chemical properties of perovskite materials and their crystal structure types. 
+
+Based on this analysis, the following recommendations are made:
 
 - Utilize the Random Forest model.
 - Enhance dataset with additional empirical data.
@@ -29,33 +31,33 @@ A Research Laboratory has asked for an analysis of a dataset to help understand 
 
 List of Feature (or attributes, either work) Descriptions
 
-vA : Valence of A
-vB : Valence of B
-r_A6 : ionic radius of A cation (A6)
-r_A12 : ionic radius of A cation (a second one, A12)
-r_B6 : ionic radius of B cation
-EN_A : Average electronegativity value of A cation
-EN_B : Average electronegativity value of B cation
-bond_len_AO : Bond length of A-O pair
-bond_len_BO : Bond length of B-O pair
-ENR_diff : Electronegativity difference with radius
-tG : Goldschmidt tolerance factor
-tau : New tolerance factor
-mu : Octahedral factor
+- vA : Valence of A
+- vB : Valence of B
+- r_A6 : ionic radius of A cation (A6)
+- r_A12 : ionic radius of A cation (a second one, A12)
+- r_B6 : ionic radius of B cation
+- EN_A : Average electronegativity value of A cation
+- EN_B : Average electronegativity value of B cation
+- bond_len_AO : Bond length of A-O pair
+- bond_len_BO : Bond length of B-O pair
+- ENR_diff : Electronegativity difference with radius
+- tG : Goldschmidt tolerance factor
+- tau : New tolerance factor
+- mu : Octahedral factor
 
 **Data Splits**
 
--The dataset was randomly split into training (80%) and test (20%) sets to evaluate model performance.
--Kfold Stratified crossvalidation was use to ensure that each class of the target variable is represented proportionally in each split.
+- The dataset was randomly split into training (80%) and test (20%) sets to evaluate model performance.
+- Kfold Stratified crossvalidation was use to ensure that each class of the target variable is represented proportionally in each split.
 
 **Data Quality Issues**
 
--No significant data quality issues were identified in the dataset.
--Nonphysical data was identified and removed using domain knowledge.
+- No significant data quality issues were identified in the dataset.
+- Nonphysical data was identified and removed using domain knowledge.
 
 **Data Licensing and Usage**
 
--[Database: Open Database, Contents: Copyright Original Authors](https://opendatacommons.org/licenses/odbl/1-0/)
+- [Database: Open Database, Contents: Copyright Original Authors](https://opendatacommons.org/licenses/odbl/1-0/)
 
 
 # Methodology
@@ -63,66 +65,87 @@ mu : Octahedral factor
 ## Data Preparation
 
 **Data Cleaning and Preprocessing**
--Missing values and placeholders were identified and removed from the dataset.
--Histograms, Correlation Plots, and Pair plots were used to inform data cleaning.
+- Missing values and placeholders were identified and removed from the dataset.
+- Histograms, Correlation Plots, and Pair plots were used to inform data cleaning.
 
 ## Modeling
 
--Decision Tree
--Random Forest
--Support Vector Machine
+- Decision Tree
+- Random Forest
+- Support Vector Machine
 
 # Evaluation
 
--Kfold Cross-validation
--Accuracy
--Comparison Table
+- Kfold Cross-validation
+- Accuracy
+- Comparison Table
 
 ## Limitations
 
--More detailed explanation of the feature variables would have maximized the data cleaning.
--An accruacy of 100% was not achieved.
+- More detailed explanation of the feature variables would have maximized the data cleaning.
+- An accruacy of 100% was not achieved.
 
 # Key Findings
 
 ## Decision Tree
 
- Decision Tree Model: Identified significant features including 'tG', 'tau', 'ENR_diff', 'bond_len_BO', and 'EN_A'. 
+ Top 5 Feature Importance: 
+ <ol>
+ <li> 'tG' 
+ <li> 'tau' 
+ <li> 'ENR_diff' 
+ <li> 'bond_len_BO' 
+ <li> 'EN_A'
+</ol>
 
 Evaluation Scores:
-Precision: 81%
-Recall: 81%
-Accuracy: 81%
-F1-Score: 81%
+- Precision: 81%
+- Recall: 81%
+- Accuracy: 81%
+- F1-Score: 81%
 
 
 ## Random Forest
 
-Random Forest Model: Highlighted 'tG', 'ENR_diff', 'tau', 'EN_B', and 'bond_len_AO' as important predictors.
+Top 5 Feature Importance: 
+<ol>
+<li> 'tG' 
+<li> 'ENR_diff' 
+<li> 'tau' 
+<li> 'EN_B' 
+<li> 'bond_len_AO' 
+</ol>
 
 Evaluation Scores:
-Precision: 85%
-Recall: 86%
-Accuracy: 86%
-F1-Score: 85%
+- Precision: 85%
+- Recall: 86%
+- Accuracy: 86%
+- F1-Score: 85%
 
-## Support Vector Machine
+## Radial Basis Function Kernel Support Vector Machine
 
-RBF Support Vector Machine: Found 'tau', 'vA', 'vB', 'EN_B', and 'ENR_diff' as key features.
+Top 5 Feature Importance: 
+<ol>
+<li> 'tau'
+<li> 'vA'
+<li> 'vB'
+<li> 'EN_B'
+<li> 'ENR_diff' 
+</ol>
 
 Evaluation Scores:
-Precision: 83%
-Recall: 83%
-Accuracy: 83%
-F1-Score: 82%
+- Precision: 83%
+- Recall: 83%
+- Accuracy: 83%
+- F1-Score: 82%
 
 ## Actionable Insight
 
 <ol>
-<li> More steps should be taken to improve the accuracy, which can be done by exploring more models.
-<li>Instead of training all models individually, I may explore ensemble methods that combine predictions from multiple models.
-
-Ensemble methods include: bagging boosting stacking
+<li> Utilize the Random Forest model.
+<li>Enhance dataset with additional empirical data.
+<li>Address missing values and discrepancies using insights from feature importance analysis to ensure data quality.
+<li>Strategically target discrete values: Leverage RBF SVM's proficiency in capturing nonlinear relationships to target molecules with discrete values for improved predictive accuracy.
 
 These can lead to improved performance compared to individual models. In this case, I might focus on training a diverse set of base models to use in the ensemble.
 
@@ -130,19 +153,39 @@ These can lead to improved performance compared to individual models. In this ca
 
 ## Next Steps
 
-While providing valuable insights, the analysis acknowledges the need for further investigation to address nuances and ensure a comprehensive understanding of categorizing Perovskite Crystal Structures.
+ There are several directions that could be explored in the next phase of this project.
 <ol>
-<li> Different crystal structures of perovskite materials can exhibit unique properties that make them suitable for specific applications. Knowing the researcher's goals could help optimize the data for that purpose.
+<li>Gather Additional Empirical Data:
 
-<li>How do bond lengths relate to the 'lowest distortion' classification? 
+- Focus on collecting empirical data, especially experimental data related to molecular structures. Bond lengths, bond angles, valences are critical empirical parameters.
+- Consider expanding the dataset to include a wide range of molecular structures and variations to capture diverse structural characteristics.
 
-<li>What insights can be gained from analyzing the relationships between features in the context of target perovskite crystal structures? 
+<li>Improve Electronegativity and Ionic Radius Estimates:
 
-<li> Can the model's predictions be interpreted in terms of the underlying chemical and structural properties represented by these features?
+- Investigate methods to improve the accuracy of electronegativity and ionic radius estimates using data-driven approaches. Machine learning models can be trained to refine and optimize these parameters based on observed structural characteristics.
+- Assess the impact of adjusted electronegativity and ionic radius values on predictive model performance and molecular structure determination.
 
-<li>Are certain atoms susceptible to false positives within the parameters of the different models?
-    
-</ol>
+<li>Feature Segmentation:
+
+- Utilize unsupervised machine learning techniques like clustering to identify patterns and group similar molecular structures. This can help in segmenting the dataset into distinct clusters without relying on labeled data.
+- Explore the use of clustering algorithms such as K-means or hierarchical clustering to identify structural similarities and differences.
+
+<li>Utilize Structural Parameters for Prediction:
+
+- Leverage structural parameters such as tG, tau, and mu to predict molecular properties and behaviors. These parameters can serve as valuable predictors in machine learning models.
+- Explore existing relationships between structural parameters and molecular properties, and consider incorporating them into the feature set for predictive modeling.
+
+<li>Deep Learning:
+
+- Investigate the application of deep learning models, such as neural networks, for molecular structure determination. Deep learning techniques can effectively capture complex relationships and patterns in the data.
+- Explore the use of deep learning architectures like convolutional neural networks (CNNs) or recurrent neural networks (RNNs) for feature extraction and classification tasks.
+
+<li>Analyze Halides for Big Data Processing:
+
+- Explore the inclusion of halides in the dataset for big data processing and analysis. Investigate how variations in halide compositions contribute to structural diversity and affect predictive model outcomes.
+- Consider incorporating halide-specific features or parameters into the dataset to enhance the predictive capabilities of machine learning models.
+</ol>    
+
 These next steps aim to address identified inconsistencies, enhance the robustness of the analysis, and provide more actionable insights for the researcher's decision-making processes.
 
 # Author
@@ -153,7 +196,7 @@ GitHub: [Cellister](https://github.com/cellister)
 
 Email address: cellister at gmail .com
 
-#Repository Structure
+# Repository Structure
 
 * **Jupyter Notebook**
 
