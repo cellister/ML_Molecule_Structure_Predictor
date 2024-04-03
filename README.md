@@ -86,10 +86,9 @@ List of Feature (or attributes, either work) Descriptions
 - An accruacy of 100% was not achieved.
 
 # Key Findings
-
-<img src = "summary_table.png" alt = "summary_table" style = "width:1500px; height: 400px; display: block; margin: center;">
-
-<img src = "radial_summary.png" alt = "radial_summary" style = "width:1500px; height: 400px; display: block; margin: center;">
+<img src="Photos/Other/summary_table.png" alt="other_image" style="width: 500px; height: 100px; display: block; margin: center;">
+<br>
+<img src = "Photos/Other/radial_summary.png" alt = "radial_summary" style = "width:500px; height: 400px; display: block; margin: center;">
 
 <table>
   <tr>
