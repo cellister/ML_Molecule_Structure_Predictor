@@ -87,67 +87,57 @@ List of Feature (or attributes, either work) Descriptions
 
 # Key Findings
 
-## Decision Tree
+<img src = "summary_table.png" alt = "summary_table" style = "width:1500px; height: 400px; display: block; margin: center;">
 
- Top 5 Feature Importance: 
- <ol>
- <li> 'tG' 
- <li> 'tau' 
- <li> 'ENR_diff' 
- <li> 'bond_len_BO' 
- <li> 'EN_A'
-</ol>
+<img src = "radial_summary.png" alt = "radial_summary" style = "width:1500px; height: 400px; display: block; margin: center;">
 
-Evaluation Scores:
-- Precision: 81%
-- Recall: 81%
-- Accuracy: 81%
-- F1-Score: 81%
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Decision Tree</th>
+    <th>Random Forest</th>
+    <th>RBF SVM</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>tG</td>
+    <td>tG</td>
+    <td>tau</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>tau</td>
+    <td>ENR_diff</td>
+    <td>vA</td>
+  </tr>
+   <tr>
+    <td>3</td>
+    <td>ENR_diff</td>
+    <td>tau</td>
+    <td>vB</td>
+  </tr>
+   <tr>
+    <td>4</td>
+    <td>bond_len_BO</td>
+    <td>EN_B</td>
+    <td>EN_B</td>
+  </tr>
+   <tr>
+    <td>5</td>
+    <td>EN_A</td>
+    <td>bond_len_AO</td>
+    <td>ENR_diff</td>
+  </tr>
+</table>
+*Radial Basis Function Kernel Support Vector Machine (RBF SVM)
 
-
-## Random Forest
-
-Top 5 Feature Importance: 
-<ol>
-<li> 'tG' 
-<li> 'ENR_diff' 
-<li> 'tau' 
-<li> 'EN_B' 
-<li> 'bond_len_AO' 
-</ol>
-
-Evaluation Scores:
-- Precision: 85%
-- Recall: 86%
-- Accuracy: 86%
-- F1-Score: 85%
-
-## Radial Basis Function Kernel Support Vector Machine
-
-Top 5 Feature Importance: 
-<ol>
-<li> 'tau'
-<li> 'vA'
-<li> 'vB'
-<li> 'EN_B'
-<li> 'ENR_diff' 
-</ol>
-
-Evaluation Scores:
-- Precision: 83%
-- Recall: 83%
-- Accuracy: 83%
-- F1-Score: 82%
-
-## Actionable Insight
+## Actionable Insights
 
 <ol>
 <li> Utilize the Random Forest model.
 <li>Enhance dataset with additional empirical data.
 <li>Address missing values and discrepancies using insights from feature importance analysis to ensure data quality.
 <li>Strategically target discrete values: Leverage RBF SVM's proficiency in capturing nonlinear relationships to target molecules with discrete values for improved predictive accuracy.
-
-These can lead to improved performance compared to individual models. In this case, I might focus on training a diverse set of base models to use in the ensemble.
 
 </ol>
 
