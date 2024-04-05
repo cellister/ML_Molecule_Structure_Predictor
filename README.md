@@ -192,11 +192,11 @@ Email address: cellister at gmail .com
 
 * **Jupyter Notebook**
 
-The [Jupyter Notebook](https://github.com/cellister/ML_Molecule_Structure_Predictor/blob/main/Project_PDFs/ML_Molecular_Structure_Predictor_Jupyter_Notebook.pdf) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
+The [Jupyter Notebook](https://github.com/cellister/notebook.pdf) is the key deliverable and contains the details of my data strategy, methodology, data cleaning, visualizations, and actionable insights.
 
 * **Presentation**
 
-This 5-7 minute, non-technical [presentation](https://github.com/cellister/ML_Molecule_Structure_Predictor/blob/main/Project_PDFs/ML_Molecular_Structure_Predictor_presentation.pdf) was made in [Canva](https://www.canva.com/design/DAGAhemjCqQ/SC9XjPt87gS8cgYyPIWb5Q/edit?utm_content=DAGAhemjCqQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
+This 5-7 minute, non-technical [presentation](https://github.com/cellister/presentation.pdf) was made in [Canva](https://www.canva.com/design/DAGAhemjCqQ/SC9XjPt87gS8cgYyPIWb5Q/edit?utm_content=DAGAhemjCqQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) and gives an impactful and brief overview of the key insights and recommendations. 
 
 * **Data**
 
